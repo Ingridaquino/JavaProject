@@ -10,7 +10,7 @@ public class Exerci03Oper {
 
 
         System.out.println("Resultado1: " + ((nu1) = (nu2)));
-        System.out.println("Resultado2: " + (nu4 != nu4));
+        System.out.println("Resultado2: " + (! ((nu3 ) == 1) || (nu4 != nu4)));
         System.out.println("Resultado3: " + (nu5 > nu6));
         System.out.println("Resultado4: " + ( a = 'A'));
     }
