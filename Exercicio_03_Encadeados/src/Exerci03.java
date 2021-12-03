@@ -1,27 +1,18 @@
-	import java.util.Scanner; // Import necessário para utilizar a classe Scanner
-	import java.util.Random;  // Import necessário para utilizar a classe Random
+import java.util.Scanner;
 
-     public class AdivRandom {
-	    public static void main (String [] args) {
-        	        // Intância (buffer) utilizando a classe Scanner
-        	        Scanner entrada = new Scanner(System.in);
-                // Intância utilizando a classe Random
-        	        Random rand = new Random();
-                int palpite, num = 0;
-        	        num = rand.nextInt(50) + 1;
-        	        System.out.println("Digite seu palpite:");
-        	        palpite = entrada.nextInt();
+public class Exerci03{
+	public static void main(String[] args){
+		System.out.println("======== verifique se o número está no intervalo entre 50 (inclusive) e 100 (inclusive); =====");
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Digite um número: ");
+		int num = entrada.nextInt();
 
-                    if(palpite == num) {
-            	            System.out.println("Você acertou!!! O número era " + num);
-            	        }
-        	        else {
-            	            if(palpite < num) {
-                                System.out.println("Seu palpite está abaixo!!! O número era " + num);
-                	            } else {
-                                System.out.println("Seu palpite está acima. O número era " + num);
-                	            }
-                    }
-        	        entrada.close();
-        	    } // fim do método main
-    } // fim da classe AdivRandom
+		if (num >= 50 || num == 100 ) {
+			System.out.println("Pertence ao intervalo");
+		}
+	    else {
+			System.out.println("Não pertence ao intervalo");
+		}
+		entrada.close();
+	}
+}
