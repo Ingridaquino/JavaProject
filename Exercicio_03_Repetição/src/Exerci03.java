@@ -13,8 +13,13 @@ public class Exerci03 {
          System.out.print("Sequência: ");
          
         for(i = 1; i <= num; i ++){
-            System.out.print( i + " ");
+            int mul = i * i;
+            if(mul%2 == 0){
+            System.out.print( mul + " ");
+
+            }
         }
+        entrada.close();
 
     }
 }
