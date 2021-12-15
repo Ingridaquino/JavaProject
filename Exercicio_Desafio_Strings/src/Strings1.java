@@ -1,33 +1,33 @@
 import java.util.Scanner;
-
 public class Strings1 {
-    public static void main(String[] args){
-        System.out.println("==== Faça um programa que receba uma string digitada pelo usuário e retorne ====");
-
+    public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        String letras ="ABCDEFGHIJKLMNOPQRSTUVXWYZ";
+        int contador[] = new int[letras.length()];
+        int i,j,l,z;
+        String frase;
+        System.out.println("Digite uma frase:");
+        frase = entrada.nextLine();
+        String fraseCa = frase.toUpperCase();
 
-        System.out.println("Digite uma frase: ");
-        String frase = entrada.next();
-        String[] letrasEncontradas;
-        int contador = 0;
+        // Imprime o tamanho da string
+        System.out.println("O tamanho da string frase é: " + frase.length());
 
-        //Tamanho da string
-        System.out.println("O tamanho da Frase é: " + frase.length());
-
-        for (int i = 0; i < frase.length(); i++) {
-                for(int j = 0; j < frase.length(); j++)
-                if(frase.charAt(j) == frase.charAt(i)){
-                    contador++;
+        // Imprimir Ocorrencia de quantas vezes aparece a letra
+        for(j=0; j<contador.length; j++){
+            contador[j]=0;
+        }
+        for(i=0; i<fraseCa.length(); i++){
+            for(z=0; z<letras.length(); z++){
+                if(fraseCa.charAt(i) == letras.charAt(z)){
+                    contador[z]++;
                 }
             }
-                // ao imprimir as frequências, exclui a contagem dos espaços
-                char c = frase.charAt(i);
-                if (c != ' ' && !letrasEncontradas.contains("" + c)) {
-                    letrasEncontradas = letrasEncontradas + c;
-                    System.out.println("A letra "+s.charAt(i)+" aparece "+cont+" vezes.");
-                }
-                    contador = 0;
-                entrada.close();
         }
-    }
 
+        for(l=0; l<letras.length(); l++){
+            System.out.println(letras.charAt(l) + " - " + contador[l]);
+        }
+
+    }
+}
